@@ -6,7 +6,7 @@
 
 - [Content](/content/readme.md)
   - [GAN](/content/GAN.md)
-  - [Test](content/test.md)
+  - [Test](/content/test.md)
 
 - [modules:](/modules/)
-  - [DIS](modules/DIS.md)
+  - [DIS](/modules/DIS.md)

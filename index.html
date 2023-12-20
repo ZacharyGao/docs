@@ -10,27 +10,88 @@
     <title>Document</title>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css">
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css"> -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
-    
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /> -->
+    <link rel="stylesheet" href="/css/sidebar-right.css" />
+
 </head>
 
 <body>
     <div id="app">Loading...</div>
-    <script>
+
+    <!-- <body>
+        <nav>
+            <a href="#/">EN</a>
+            <a href="#/zh-cn/">简体中文</a>
+        </nav>
+        <div id="app"></div>
+    </body> -->
+
+    <!-- <script>
         window.$docsify = {
             name: 'Docs',
             repo: 'zacharyGao',
-            loadSidebar: true,
+            el: '#app', // 欢迎页
+            // coverpage: true, // 封面
+            loadSidebar: true, // 侧边栏
+            loadNavbar: true, // 导航栏
+            topMargin: 55, // 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间
+            mergeNavbar: true,  // 小屏设备下合并导航栏到侧边栏
+            auto2top: true, // 自动回到顶部
+            maxLevel: 3, // 最大标题层级
+            subMaxLevel: 2, // 每个标题下面的最大标题层级
+            search: 'auto', // 搜索
+            search: {
+                maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+                paths: 'auto', // or 'auto'
+                placeholder: 'Type to search',
+                noData: 'No Results!',
+                depth: 2 // 搜索标题的最大层级, 1 - 6
+            },
+            pagination: {
+                previousText: 'Prev', // 上一页按钮文字
+                nextText: 'Next', // 下一页按钮文字
+                crossChapter: true, // 在章节之间显示分页
+                crossChapterText: true // 文章之间显示分页
+            },
+            plugins: [
+                function (hook, vm) {
+                    hook.beforeEach(function (html) {
+                        var url = vm.route.file
+                        var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n\n'
+                        return editHtml + html
+                    })
+                }
+            ],
+            // executeScript: true, // 执行 script 标签中的脚本
+            formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}', // 格式化更新时间
+            formatUpdated: '{MM}/{DD} {HH}:{mm}', // 格式化更新时间
+
+
             alias: {
                 '/.*/_sidebar.md': '/_sidebar.md'
             },
-            subMaxLevel: 2
+            relativePath: true, // 启用相对路径
+            // basePath: '/docs/', // 基础路径
 
+            // 404 页面
+            notFoundPage: true, // 404 页面
+            notFoundPage: {
+                '/': 'custom-404.md'
+            },
         }
-    </script>
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-    <!-- <script src="//cdn.jsdelivr.net/gh/liawnliu/docsify-theme-liawn@v1.2.0/dist/theme-liawn.min.js"></script> -->
 
+    </script> -->
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+    <script src="/js/script.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/gh/liawnliu/docsify-theme-liawn@v1.2.0/dist/theme-liawn.min.js"></script> -->
+    <!-- <script src="//cdn.jsdelivr.net/gh/liawnliu/docsify-theme-liawn@v1.2.0/dist/theme-liawn.min.js"></script> -->
+    <!-- <script src="/js/sidebar-right.js"></script> -->
+    <script src="/js/theme-liawn.min.js"></script>
+    <!-- <script src="/js/custum.js"></script> -->
+    <!-- <script src="/theme-liawn.js"></script> -->
 </body>
 
 </html>
