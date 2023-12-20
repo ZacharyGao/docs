@@ -5,7 +5,7 @@ window.$docsify = {
     // coverpage: true, // 封面
     loadSidebar: true, // 侧边栏
     // loadNavbar: true, // 导航栏
-    topMargin: 55, // 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间
+    topMargin: 50, // 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间
     mergeNavbar: true,  // 小屏设备下合并导航栏到侧边栏
     auto2top: true, // 自动回到顶部
     maxLevel: 3, // 最大标题层级
@@ -28,8 +28,16 @@ window.$docsify = {
         function (hook, vm) {
             hook.beforeEach(function (html) {
                 var url = vm.route.file
-                var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n\n'
-                return editHtml + html
+                var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n'
+                // console.log(url)
+                // console.log(editHtml)
+                // var html = html.replace(/<h1.*?>(.*?)<\/h1>/, function (match, submatch) {
+                //     return '<h1>' + submatch + '</h1>' + editHtml
+                // })
+                // var html = "https://github.com/zacharyGao/zacharyGao.github.io/blob/master/docs/README.md"
+                // console.log(html)
+                // return editHtml + html
+                return html
             })
         }
     ],
@@ -37,7 +45,12 @@ window.$docsify = {
     formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}', // 格式化更新时间
     formatUpdated: '{MM}/{DD} {HH}:{mm}', // 格式化更新时间
 
-    
+    toc: {
+        scope: '.markdown-section',
+        headings: 'h1, h2, h3, h4, h5, h6',
+        title: 'Table of Contents',
+    },
+
     alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
     },

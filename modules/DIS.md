@@ -1,7 +1,5 @@
 # COMP4039 DIS
 
-[toc]
-
 ## 1. Intro - **w1**
 
 > What this topic covers
