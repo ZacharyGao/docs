@@ -39,6 +39,20 @@ window.$docsify = {
                 // return editHtml + html
                 return html
             })
+        },
+        function (hook, vm) {
+            hook.beforeEach(function (html) {
+                // var url = vm.route.file
+                // const headingRegex = /^#\s+(.+)$/gm;
+                const regex = /^#\s.*/gm; // 匹配每行的一级标题
+                return html.replace(regex, match => match + "<!--{docsify-ignore-all} -->");
+
+                // // var newhtml = html.replace(/# .*? /, "# match")
+                // var newhtml = html.replace(headingRegex, '# $1 <!--{docsify-ignore-all}-->\n');
+                // console.log(newhtml)                
+                // // return newhtml
+                // return html
+            })
         }
     ],
     // executeScript: true, // 执行 script 标签中的脚本

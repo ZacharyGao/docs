@@ -1,4 +1,4 @@
-# COMP4039 DIS
+# COMP4039 DIS <!--{docsify-ignore-all} -->
 
 ## 1. Intro - **w1**
 
