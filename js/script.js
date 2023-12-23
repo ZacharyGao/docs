@@ -221,12 +221,4 @@ window.$docsify = {
     // unavailableForLegalReasonsPage: {
     //     '/': 'custom-451.md'
     // },
-    // 500 页面
-    // internalServerErrorPage: true, // 500 页面
-    // internalServerErrorPage: {
-    //     '/': 'custom-500.md'
-    // },
-
-
-
 }
