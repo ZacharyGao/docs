@@ -1,22 +1,26 @@
 window.$docsify = {
-    name: 'Docs',
+    name: 'CS with AI',
     // repo: 'zacharyGao',
     el: '#app', // 欢迎页
     // coverpage: true, // 封面
+    coverpage: {
+        // '/': '/inc/cover.md',
+        // '/zh-cn/': 'cover.md'
+    },
     loadSidebar: true, // 侧边栏
     // loadNavbar: true, // 导航栏
-    topMargin: 50, // 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间
+    topMargin: 40, // 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间
     mergeNavbar: true,  // 小屏设备下合并导航栏到侧边栏
     auto2top: true, // 自动回到顶部
     maxLevel: 3, // 最大标题层级
     subMaxLevel: 2, // 每个标题下面的最大标题层级
-    search: 'auto', // 搜索
+    // search: 'auto', // 搜索
     search: {
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
         paths: 'auto', // or 'auto'
         placeholder: 'search',
         noData: 'No Results!',
-        depth: 2 // 搜索标题的最大层级, 1 - 6
+        depth: 3 // 搜索标题的最大层级, 1 - 6
     },
     pagination: {
         previousText: 'Prev', // 上一页按钮文字
@@ -25,21 +29,21 @@ window.$docsify = {
         crossChapterText: true // 文章之间显示分页
     },
     plugins: [
-        function (hook, vm) {
-            hook.beforeEach(function (html) {
-                var url = vm.route.file
-                var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n'
-                // console.log(url)
-                // console.log(editHtml)
-                // var html = html.replace(/<h1.*?>(.*?)<\/h1>/, function (match, submatch) {
-                //     return '<h1>' + submatch + '</h1>' + editHtml
-                // })
-                // var html = "https://github.com/zacharyGao/zacharyGao.github.io/blob/master/docs/README.md"
-                // console.log(html)
-                // return editHtml + html
-                return html
-            })
-        },
+        // function (hook, vm) {
+        //     hook.beforeEach(function (html) {
+        //         var url = vm.route.file
+        //         var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n'
+        //         // console.log(url)
+        //         // console.log(editHtml)
+        //         // var html = html.replace(/<h1.*?>(.*?)<\/h1>/, function (match, submatch) {
+        //         //     return '<h1>' + submatch + '</h1>' + editHtml
+        //         // })
+        //         // var html = "https://github.com/zacharyGao/zacharyGao.github.io/blob/master/docs/README.md"
+        //         // console.log(html)
+        //         // return editHtml + html
+        //         return html
+        //     })
+        // },
         function (hook, vm) {
             hook.beforeEach(function (html) {
                 // var url = vm.route.file
