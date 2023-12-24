@@ -14,7 +14,7 @@ window.$docsify = {
     search: {
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
         paths: 'auto', // or 'auto'
-        placeholder: 'Type to search',
+        placeholder: 'search',
         noData: 'No Results!',
         depth: 2 // 搜索标题的最大层级, 1 - 6
     },
@@ -74,7 +74,7 @@ window.$docsify = {
     // 404 页面
     notFoundPage: true, // 404 页面
     notFoundPage: {
-        '/': 'custom-404.md'
+        '/': '/inc/404.md'
     },
     // 403 页面
     // forbiddenPage: true, // 403 页面
