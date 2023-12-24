@@ -1,6 +1,8 @@
 window.$docsify = {
     name: 'CS with AI',
     // repo: 'zacharyGao',
+    rootPath: 'content/',
+    
     el: '#app', // 欢迎页
     // coverpage: true, // 封面
     coverpage: {
